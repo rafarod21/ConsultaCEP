@@ -28,6 +28,36 @@ const errorMessagesCep = {
   notExist: 'O CEP informado não existe',
 };
 
+const states = new Map([
+  ['AC', 'Acre'],
+  ['AL', 'Alagoas'],
+  ['AP', 'Amapá'],
+  ['AM', 'Amazonas'],
+  ['BA', 'Bahia'],
+  ['CE', 'Ceará'],
+  ['DF', 'Distrito Federal'],
+  ['ES', 'Espírito Santo'],
+  ['GO', 'Goías'],
+  ['MA', 'Maranhão'],
+  ['MT', 'Mato Grosso'],
+  ['MS', 'Mato Grosso do Sul'],
+  ['MG', 'Minas Gerais'],
+  ['PA', 'Pará'],
+  ['PB', 'Paraíba'],
+  ['PR', 'Paraná'],
+  ['PE', 'Pernambuco'],
+  ['PI', 'Piauí'],
+  ['RJ', 'Rio de Janeiro'],
+  ['RN', 'Rio Grande do Norte'],
+  ['RS', 'Rio Grande do Sul'],
+  ['RO', 'Rondônia'],
+  ['RR', 'Roraíma'],
+  ['SC', 'Santa Catarina'],
+  ['SP', 'São Paulo'],
+  ['SE', 'Sergipe'],
+  ['TO', 'Tocantins'],
+]);
+
 export const Home: React.FC = () => {
   const [detailsCep, setDetailsCep] = useState<CepProps>();
   const [inputCep, setInputCep] = useState('');
@@ -41,13 +71,19 @@ export const Home: React.FC = () => {
     setLoading(true);
     if (cepIsValid(inputCep)) {
       try {
-        const { data } = await api.get(`/ceps`, {
+        const response = await api.get(`/ceps`, {
           params: {
             cep: inputCep,
           },
         });
-        data.cep = inputCep.slice(0, 5) + '-' + inputCep.slice(5);
-        setDetailsCep(data);
+        const cepInfo: CepProps = response.data;
+
+        cepInfo.cep = inputCep.slice(0, 5) + '-' + inputCep.slice(5);
+
+        const state = states.get(cepInfo.uf);
+        if (state) cepInfo.uf = `${state} (${cepInfo.uf})`;
+
+        setDetailsCep(cepInfo);
       } catch (error) {
         setErrorInputCep(true);
         setCurrentErrorMessageCep(errorMessagesCep.notExist);
@@ -58,6 +94,7 @@ export const Home: React.FC = () => {
       setCurrentErrorMessageCep(errorMessagesCep.incomplete);
       setDetailsCep(undefined);
     }
+
     setLoading(false);
   }
 
