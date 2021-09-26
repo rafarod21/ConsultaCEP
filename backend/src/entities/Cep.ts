@@ -9,13 +9,28 @@ class Cep {
   street: string;
 
   @Column()
+  complement: string;
+
+  @Column()
   neighborhood: string;
 
   @Column()
   city: string;
 
   @Column()
-  state: string;
+  uf: string;
+
+  @Column()
+  ibge: string;
+
+  @Column()
+  gia: string;
+
+  @Column()
+  ddd: string;
+
+  @Column()
+  siafi: string;
 }
 
 export { Cep };

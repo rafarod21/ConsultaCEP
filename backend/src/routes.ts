@@ -1,7 +1,11 @@
 import { Router } from 'express';
+import { GetCepController } from './controllers/GetCepController';
+import { ensureCepInCache } from './middlewares/ensureCepInCache';
 
 const router = Router();
 
-router.get('/ceps', () => console.log('Rota get'));
+const getCepController = new GetCepController();
+
+router.get('/ceps', ensureCepInCache, getCepController.handle);
 
 export { router };

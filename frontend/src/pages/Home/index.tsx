@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import { Button, TextField } from '@material-ui/core';
 
-import { apiViaCEP } from '../../services/apiViaCEP';
+import { api } from '../../services/api';
 import { MaskCEP } from '../../utils/MaskCEP';
 
 type viaCepProps = {
@@ -33,7 +33,11 @@ export const Home: React.FC = () => {
 
   async function handleGetCEP() {
     if (inputCEP.length === 8) {
-      const { data } = await apiViaCEP.get(`/${inputCEP}/json/`);
+      const { data } = await api.get(`/ceps`, {
+        params: {
+          cep: inputCEP,
+        },
+      });
       if ('erro' in data) {
         setErrorInputCEP(true);
         setCurrentErrorMessageCEP(errorMessagesCEP.notExist);

@@ -28,7 +28,23 @@ export class CreateCeps1632271301847 implements MigrationInterface {
             type: 'varchar',
           },
           {
-            name: 'state',
+            name: 'uf',
+            type: 'varchar',
+          },
+          {
+            name: 'ibge',
+            type: 'varchar',
+          },
+          {
+            name: 'gia',
+            type: 'varchar',
+          },
+          {
+            name: 'ddd',
+            type: 'varchar',
+          },
+          {
+            name: 'siafi',
             type: 'varchar',
           },
         ],
