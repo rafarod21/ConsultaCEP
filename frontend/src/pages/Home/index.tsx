@@ -33,19 +33,20 @@ export const Home: React.FC = () => {
 
   async function handleGetCEP() {
     if (inputCEP.length === 8) {
-      const { data } = await api.get(`/ceps`, {
+      const cepDetails = await api.get(`/ceps`, {
         params: {
           cep: inputCEP,
         },
       });
-      if ('erro' in data) {
-        setErrorInputCEP(true);
-        setCurrentErrorMessageCEP(errorMessagesCEP.notExist);
-      }
-      setDataCEP(data);
-    } else {
-      setErrorInputCEP(true);
-      setCurrentErrorMessageCEP(errorMessagesCEP.incomplete);
+      console.log(cepDetails);
+      //   if ('erro' in cepDetails) {
+      //     setErrorInputCEP(true);
+      //     setCurrentErrorMessageCEP(errorMessagesCEP.notExist);
+      //   }
+      //   setDataCEP(cepDetails);
+      // } else {
+      //   setErrorInputCEP(true);
+      //   setCurrentErrorMessageCEP(errorMessagesCEP.incomplete);
     }
   }
 
