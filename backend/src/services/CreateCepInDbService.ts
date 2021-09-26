@@ -14,7 +14,7 @@ class CreateCepInDbService {
     }
 
     const cepDetails = cepsRepositories.create({
-      cep: inputCep,
+      cep: String(inputCep),
       street: data.logradouro,
       complement: data.complemento,
       neighborhood: data.bairro,

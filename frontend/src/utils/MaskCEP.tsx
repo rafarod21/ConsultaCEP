@@ -1,18 +1,21 @@
+import { forwardRef } from 'react';
 import NumberFormat from 'react-number-format';
 
 interface NumberFormatCustomProps {
-  inputRef: (instance: NumberFormat | null) => void;
   onChange: (event: { target: { name: string; value: string } }) => void;
   name: string;
 }
 
-export function MaskCEP(props: NumberFormatCustomProps) {
-  const { inputRef, onChange, ...other } = props;
+export const MaskCep = forwardRef(function NumberFormatCustom(
+  props: NumberFormatCustomProps,
+  ref
+) {
+  const { onChange, ...other } = props;
 
   return (
     <NumberFormat
       {...other}
-      getInputRef={inputRef}
+      getInputRef={ref}
       onValueChange={(values) => {
         onChange({
           target: {
@@ -25,4 +28,4 @@ export function MaskCEP(props: NumberFormatCustomProps) {
       mask='_'
     />
   );
-}
+});

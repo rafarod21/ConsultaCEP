@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1000px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
+@media (max-width: 900px) {
+  html {
+    font-size: 83%;
+  }
+}
+
+@media (max-width: 800px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+@media (max-width: 400px) {
+  html {
+    font-size: 60%;
+  }
+}
+
+body,
+input,
+button,
+textarea {
+  font: 400 1rem 'Roboto', sans-serif;
+  border: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
