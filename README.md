@@ -14,7 +14,7 @@ Aplicação para mostrar detalhes sobre um determinado CEP.
 
 :small_blue_diamond: [Layout](#layout-milky_way)
 
-:small_blue_diamond: [Back-end](#back-end-card_file_box)
+:small_blue_diamond: [Backend](#backend-card_file_box)
 
 :small_blue_diamond: [JSON](#json-floppy_disk)
 
@@ -48,56 +48,36 @@ Aplicação para mostrar detalhes sobre um determinado CEP.
   :computer: Desktop :computer:
 </h3>
 <p align="center">
-  <Img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" width=400>
-  <Img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" width=400>
-  <Img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" width=400>
-  <Img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" width=400>
-</p>
-  
-<h3 align="center">
-  :iphone: Mobile :iphone:
-</h3>
-
-<p align="center">
-  <Img src="https://images.pexels.com/photos/1181673/pexels-photo-1181673.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" width=200>
-  <Img src="https://images.pexels.com/photos/1181673/pexels-photo-1181673.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" width=200>
-  <Img src="https://images.pexels.com/photos/1181673/pexels-photo-1181673.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" width=200>
-  <Img src="https://images.pexels.com/photos/1181673/pexels-photo-1181673.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" width=200>
+  <Img src="https://github.com/rafarod21/ConsultaCEP/blob/master/gitAssets/pageHome.jpeg">
 </p>
 
-## Back-end :card_file_box:
+## Backend :card_file_box:
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Para o backend foi utilizado Node.js com Express e o banco de dados utilizado foi o SQLite.
 
 ## JSON :floppy_disk:
 
-### Nome da tabela:
+No banco de dados existe apenas uma tabela:
 
-|nomeDoCampo|nomeDoCampo|nomeDoCampo|
-| -------- |-------- |-------- |
-|valor do campo|valor do campo|valor do campo|
-|valor do campo|valor do campo|valor do campo|
-|valor do campo|valor do campo|valor do campo|
-|valor do campo|valor do campo|valor do campo|
+### CEP:
+
+|cep|street|complement|neighborhood|city|uf|ibge|gia|ddd|siafi|
+| -------- |-------- |-------- |-------- |-------- |-------- |-------- |-------- |-------- |-------- |
+|87013210|Avenida Tamandaré||Zona 01|Maringá|PR|4115200||44|7691|
+|02221000|Avenida Jardim Japão|até 1101/1102|Jardim Brasil (Zona Norte)|São Paulo|SP|3550308|1004|11|7107|
 
 ## Veja você mesmo :arrow_forward:
 
-#### :small_blue_diamond: Deploy Netlify: [Nome do projeto](https://www.netlify.com)
-
-#### :small_blue_diamond: Deploy Vercel: [Nome do projeto](https://vercel.com)
-
 #### :small_blue_diamond: Na própria máquina - Passo-a-passo
-    
-<!-- ************ CASO O PROJETO TENHA FRONTEND E BACKEND ************ -->
     
 ##### Passo 1: Clonando o repositório
 ```bash
-$ git clone https://github.com/rafarod21/nomeRepo.git
+$ git clone https://github.com/rafarod21/ConsultaCEP.git
 ```
     
-##### Passo 2: Acessando a pasta do backend do projeto (caso não queira utilizar o backend local, pule para o passo 5)
+##### Passo 2: Acessando a pasta do backend do projeto
 ```bash
-$ cd path
+$ cd .\backend\
 ```
     
 ##### Passo 3: Instalando as dependências do backend com npm ou Yarn
@@ -106,7 +86,7 @@ $ cd path
 $ npm install
 
 # Utilizando Yarn
-$ yarn install
+$ yarn
 ```
     
 ##### Passo 4: Executando o backend do projeto com npm ou Yarn
@@ -120,7 +100,7 @@ $ yarn dev
     
 ##### Passo 5: EM OUTRO TERMINAL, acesse a pasta do frontend do projeto
 ```bash
-$ cd path
+$ cd .\frontend\
 ```
     
 ##### Passo 6: Instalando as dependências do frontend com npm ou Yarn
@@ -129,64 +109,31 @@ $ cd path
 $ npm install
 
 # Utilizando Yarn
-$ yarn install
+$ yarn
 ```
 
 ##### Passo 7: Executando o frontend do projeto com npm ou Yarn
 ```bash
 # Utilizando npm
-$ npm run dev
+$ npm run start
 
 # Utilizando Yarn
-$ yarn dev
+$ yarn start
   
 # O projeto deverá ser iniciado na porta 3000
 ```
 
 ##### Passo 8: Vizualizando o projeto
 Acesse: http://localhost:3000
-    
-<!-- ************ CASO O PROJETO TENHA APENAS O FRONTEND ************ -->
-##### Passo 1: Clonando o repositório
-```bash
-$ git clone https://github.com/rafarod21/nomeRepo.git
-```
-  
-##### Passo 2: Acessando a pasta do projeto
-```bash
-$ cd nomeDoProjeto
-```
 
-##### Passo 3: Instalando as dependências com npm ou Yarn
-```bash
-# Utilizando npm
-$ npm install
-
-# Utilizando Yarn
-$ yarn install
-```
-
-##### Passo 4: Executando o projeto com npm ou Yarn
-```bash
-# Utilizando npm
-$ npm run dev
-
-# Utilizando Yarn
-$ yarn dev
-  
-# O projeto deverá ser iniciado na porta 3000
-```
-
-##### Passo 5: Vizualizando o projeto
-Acesse: http://localhost:3000
-  
 ## Tecnologias :books:
     
 - [Typescript](https://www.typescriptlang.org)
 - [ReactJS](https://pt-br.reactjs.org)
-- [NextJS](https://nextjs.org)
 - [NodeJS](https://nodejs.org/en)
-- [React Native](https://reactnative.dev)
+- [Material-UI](https://mui.com)
+  
+  
     
 <!--
 <p align="center">
