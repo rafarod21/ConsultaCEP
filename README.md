@@ -88,8 +88,17 @@ $ npm install
 # Utilizando Yarn
 $ yarn
 ```
+  
+##### Passo 4: Executando os testes do backend do projeto com npm ou Yarn
+```bash
+# Utilizando npm
+$ npm run test
+
+# Utilizando Yarn
+$ yarn test
+```
     
-##### Passo 4: Executando o backend do projeto com npm ou Yarn
+##### Passo 5: Executando o backend do projeto com npm ou Yarn
 ```bash
 # Utilizando npm
 $ npm run dev
@@ -98,12 +107,12 @@ $ npm run dev
 $ yarn dev
 ```
     
-##### Passo 5: EM OUTRO TERMINAL, acesse a pasta do frontend do projeto
+##### Passo 6: EM OUTRO TERMINAL, acesse a pasta do frontend do projeto
 ```bash
 $ cd .\frontend\
 ```
     
-##### Passo 6: Instalando as dependências do frontend com npm ou Yarn
+##### Passo 7: Instalando as dependências do frontend com npm ou Yarn
 ```bash
 # Utilizando npm
 $ npm install
@@ -112,7 +121,7 @@ $ npm install
 $ yarn
 ```
 
-##### Passo 7: Executando o frontend do projeto com npm ou Yarn
+##### Passo 8: Executando o frontend do projeto com npm ou Yarn
 ```bash
 # Utilizando npm
 $ npm run start
@@ -123,7 +132,7 @@ $ yarn start
 # O projeto deverá ser iniciado na porta 3000
 ```
 
-##### Passo 8: Vizualizando o projeto
+##### Passo 9: Vizualizando o projeto
 Acesse: http://localhost:3000
 
 ## Tecnologias :books:
