@@ -20,6 +20,6 @@ export function ensureCepInCache(
     return next();
   }
 
-  console.log('CEP pego da cache');
+  console.log('CEP pego da cache', cep);
   return response.json(valueCurrentCep);
 }

@@ -16,7 +16,7 @@ class GetCepController {
     const getCepInDbService = new GetCepInDbService();
     const cepDetails = await getCepInDbService.execute(cep);
     if (cepDetails) {
-      console.log('CEP pego no banco');
+      console.log('CEP pego no banco', cep);
       myCache.set(cepDetails.cep, cepDetails);
       return response.json(cepDetails);
     }
@@ -27,8 +27,8 @@ class GetCepController {
       return response.status(400).json({ error: 'CEP não existe' });
     }
 
-    console.log('CEP pego da API e salvo no banco');
-    const value = myCache.set(data.cep, data);
+    console.log('CEP pego da API e salvo no banco', cep);
+    myCache.set(data.cep, data);
     return response.json(data);
   }
 }
