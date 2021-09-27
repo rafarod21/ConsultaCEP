@@ -73,6 +73,8 @@ No banco de dados existe apenas uma tabela:
 ##### Passo 1: Clonando o repositório
 ```bash
 $ git clone https://github.com/rafarod21/ConsultaCEP.git
+  
+$ cd .\ConsultaCEP\
 ```
     
 ##### Passo 2: Acessando a pasta do backend do projeto
