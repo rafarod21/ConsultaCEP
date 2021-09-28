@@ -3,7 +3,7 @@ import { KeyboardEvent, useEffect, useState } from 'react';
 import { Button, TextField, LinearProgress } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
 
-import { MaskCep } from '../../utils/MaskCep2';
+import { MaskCep } from '../../utils/MaskCep';
 import { cepIsValid } from '../../utils/cepIsValid';
 
 import { api } from '../../services/api';
