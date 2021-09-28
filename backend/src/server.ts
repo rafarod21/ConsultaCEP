@@ -25,6 +25,6 @@ app.use(
   }
 );
 
-app.listen(3333, () => console.log('Server ir running'));
+app.listen(3333, () => console.log('Server is running'));
 
 export default app;
