@@ -74,12 +74,12 @@ No banco de dados existe apenas uma tabela:
 ```bash
 $ git clone https://github.com/rafarod21/ConsultaCEP.git
   
-$ cd .\ConsultaCEP\
+$ cd .\ConsultaCEP
 ```
     
 ##### Passo 2: Acessando a pasta do backend do projeto
 ```bash
-$ cd .\backend\
+$ cd .\backend
 ```
     
 ##### Passo 3: Instalando as dependências do backend com npm ou Yarn
@@ -111,7 +111,7 @@ $ yarn dev
     
 ##### Passo 6: EM OUTRO TERMINAL, acesse a pasta do frontend do projeto
 ```bash
-$ cd .\frontend\
+$ cd .\frontend
 ```
     
 ##### Passo 7: Instalando as dependências do frontend com npm ou Yarn
